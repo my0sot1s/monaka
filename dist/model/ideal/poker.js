@@ -14,7 +14,7 @@ var K = 'k';
 var A = 'a';
 
 var Poker = function () {
-  
+  // Note: value : là số bắt đầu từ 2-9,0,j,q,k,a
   function Poker(main) {
     _classCallCheck(this, Poker);
 
