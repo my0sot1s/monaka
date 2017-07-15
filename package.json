@@ -25,7 +25,7 @@
     "npm": "4.2.0"
   },
   "scripts": {
-    "build": "node mini.js dist/log.js dist/model/laws.js dist/model/utils.js dist/model/cons.js dist/model/ideal/nhap.js dist/model/ideal/poker.js",
+    "build": "node mini.js dist/log.js dist/model/laws.js dist/model/utils.js dist/model/judgment.js dist/model/cons.js dist/model/ideal/nhap.js dist/model/ideal/poker.js",
     "start": "NODE_ENV=production node dist/app.js"
   },
   "repository": {
