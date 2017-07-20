@@ -52,9 +52,11 @@ var fileName = 'public/log.txt';
 // http://localhost:3100/poker?cards1=4b3b2b0t9b8t8b6cabkrqcqbjb qc0t8t8t8b2b3b6cabrbqb9b4b
 // http://localhost:3100/poker?cards1=3c2c2r0r0t9r9b7tacabkbjcjt   qc0t8t8t8b2b3b6cabrbqb9b4b
 // http://localhost:3100/poker?cards1=4c4b4t9c9r8b7r5r0c0rkrqbjr
+// http://localhost:3100/poker?cards1=4c4b4t4r9r8b7r5r0c0rkrqbjr
 // http://localhost:3100/poker?cards1=5c2t2b9t7c7b4r4cabkrkbqt9r
 // http://localhost:3100/poker?cards1=jb9tqb3c2c6c5r4c7rarqr3r6r
 // http://localhost:3100/poker?cards1=ab2b8c3ckb4r9c4b5t3t2t7r7c
+// http://localhost:3100/poker?cards1=jt8bac2cqrqc4t5t0bkb9b7b5b 
 
 
 // Tạo bộ bài gồm có 52 quân
@@ -99,16 +101,13 @@ app.get('/poker', function (req, res) {
     // owns = getOwns(Object.values(data))
     // Tính ra 13 quân bài của enemy
     enemy = (0, _utils.getEnemy)(POKERS, owns);
-    if (enemy !== 13) res.send('Bài nhập vào ko đúng');
-    var ii = (0, _laws.moonOfShadow)(enemy);
-    var _so = [];
-    for (var i = 0; i < ii.length; i++) {
-      _so = (0, _judgment.soChi)(_so, ii[i]);
-    }
+    console.log(enemy);
+    if (enemy.length !== 13) res.send('Bài nhập vào ko đúng');
+    // var ii = moonOfShadow(enemy)
+    var _so = (0, _judgment.soChi)((0, _laws.moonOfShadow)(enemy));
     enemy = _so[0];
     // debugger
   }
-  // console.log(enemy)
 
   for (var item in cards) {
     // var pokers = sortByValue(cards[item].split('_'))
