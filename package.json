@@ -1,6 +1,6 @@
 {
   "name": "monaka",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "monaka is a simple app react vs nodejs",
   "main": "index.js",
   "dependencies": {
