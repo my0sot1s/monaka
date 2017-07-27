@@ -4,7 +4,7 @@ var _ = require('lodash');
 var http = require('http');
 var log = require('../log');
 var TIME_PER_REQ = 200;
-var NUMS_OF_REQ = 50;
+var NUMS_OF_REQ = 1000;
 /**
  * Xóa trộn quân bài
  * Xáo trộn và lấy tuần tự
