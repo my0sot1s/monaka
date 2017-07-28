@@ -8,7 +8,7 @@ var isError = 0, errorAt = []
 
 // xu ly
 /**
- * Đọc file lấy thông tinh
+ * Đọc file lấy thông tin
  * @param {string} path 
  * @param {function} done 
  * @return {string}
