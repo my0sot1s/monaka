@@ -32,13 +32,21 @@ function deal() {
   var layCards = function layCards(ar) {
     return JSON.stringify(ar).replace(/,|\]|\[|\"/g, '');
   };
-  var xao = _.chunk(shuffle(mang), 13),
+  // var xao = _.chunk(shuffle(mang), 13),// mang 4 pt
+  var xao = shuffle(mang),
       // mang 4 pt
+  cards1 = [],
+      cards2 = [],
+      cards3 = [];
+  for (var i = 1; i <= 52; i++) {
+    if (i % 4 === 1) cards1.push(xao[i - 1]);
+    if (i % 4 === 2) cards2.push(xao[i - 1]);
+    if (i % 4 === 3) cards3.push(xao[i - 1]);
+  }
   // tao request 
   //The url we want is `www.nodejitsu.com:1337/`
-  cards1 = layCards(xao[0]),
-      cards2 = layCards(xao[1]),
-      cards3 = layCards(xao[2]);
+  // cards1 = layCards(xao[0]), cards2 = layCards(xao[1]), cards3 = layCards(xao[2])
+  cards1 = layCards(cards1), cards2 = layCards(cards2), cards3 = layCards(cards3);
   // console.log(cards1)
   var options = {
     // host: 'dbwkr.herokuapp.com',
