@@ -55,7 +55,7 @@ function deal() {
     headers: {
       'Content-Type': 'application/json'
     },
-    path: '/poker?cards1=' + cards1 + '&cards2=' + cards2 + '&cards3=' + cards3
+    path: '/poker?cards1=' + cards1 + '&cards2=' + cards2 //+ '&cards3=' + cards3,
   };
   var done = function done(response) {
     var str = '';
